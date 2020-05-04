@@ -1,0 +1,6 @@
+<launch>
+	<include file="$(find realsense2_camera)/launch/rs_rgbd.launch"/>
+
+	<node name="mouth_detector" pkg="mouth_detect" type="detect_open_mouth.py"/>
+	<node name="mouth_xy2xyz_converter" pkg="mouth_detect" type="mouth_xy2xyz_converter"/>
+</launch>
